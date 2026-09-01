@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concrete Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img class="page-mascot" src="assets/concrete-mascot.jpg" alt="" aria-hidden="true">
+    <div class="moai-motifs" aria-hidden="true">
+        <span>🗿</span>
+        <span>🗿</span>
+        <span>🗿</span>
+        <span>🗿</span>
+        <span>🗿</span>
+    </div>
+
+    <main class="page-shell">
+    <div class="brand-block">
+        <img class="concrete-logo" src="assets/concrete-logo.png" alt="Concrete" width="100" height="100">
+        <p class="eyebrow">Concrete ecosystem</p>
+    </div>
+
+    <section id="searchArea">
+        <div class="hero-copy">
+            <h1>Concrete Vault Explorer</h1>
+            <p class="hero-description">Search, compare and explore live Concrete vault data across supported networks.</p>
+        </div>
+
+        <div id="vaultStatusTop">
+            <p id="vaultDataStatus">
+                Vault data: Loading...
+            </p>
+        </div>
+
+        <div id="vaultControls">
+            <label class="control control-search">
+                <span>Search vaults</span>
+                <input id="vaultSearch" type="search" placeholder="Search by vault name or asset" disabled>
+            </label>
+
+            <label class="control">
+                <span>View</span>
+                <select id="vaultView" disabled>
+                    <option value="active">Active vaults</option>
+                    <option value="all">All vaults</option>
+                </select>
+            </label>
+
+            <label class="control">
+                <span>Network</span>
+                <select id="chainFilter" disabled>
+                    <option value="all">All chains</option>
+                </select>
+            </label>
+
+            <label class="control">
+                <span>Sort by</span>
+                <select id="vaultSort" disabled>
+                    <option value="default">Default</option>
+                    <option value="tvl-desc">TVL: High to low</option>
+                    <option value="tvl-asc">TVL: Low to high</option>
+                    <option value="apy-desc">APY: High to low</option>
+                    <option value="apy-asc">APY: Low to high</option>
+                </select>
+            </label>
+        </div>
+    </section>
+
+    <div class="primary-actions">
+        <button id="viewVaultButton" type="button" disabled>View Vault</button>
+        <button id="retryVaultButton" type="button" hidden>Retry</button>
+    </div>
+
+    <section id="vaultDetails" hidden>
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Selected vault</p>
+                <h2>Vault details</h2>
+            </div>
+            <button id="closeVaultDetails" class="secondary-button" type="button">Close details</button>
+        </div>
+        <div id="vaultDetailsContent"></div>
+    </section>
+
+    <section class="browse-section" aria-labelledby="browseHeading">
+        <div class="section-heading browse-heading">
+            <div>
+                <p class="eyebrow">Live opportunities</p>
+                <h2 id="browseHeading">Explore vaults</h2>
+            </div>
+            <p>Featured vaults appear first in the default Active view.</p>
+        </div>
+        <div id="vaultInfo"></div>
+    </section>
+
+    <div id="vaultStatusBottom"></div>
+
+    <p id="liveStatus">Live data updates every 30 seconds</p>
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
