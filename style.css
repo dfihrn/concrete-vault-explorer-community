@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Enduro";
+    src: url("https://app.concrete.xyz/_next/static/immutable/media/EnduroWeb_Medium-s.p.196f2pkvalhs3.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
 :root {
     --canvas: #f2f0ea;
     --surface: #faf9f5;
@@ -147,11 +155,14 @@ h1, h2, h3, p { margin-top: 0; }
 h1 {
     max-width: none;
     margin-bottom: 16px;
-    color: #A99A58;
+    color: #131212;
+    font-family: "Enduro", "Helvetica Neue", sans-serif;
     font-size: clamp(44px, 7vw, 76px);
-    font-weight: 700;
-    letter-spacing: -0.055em;
-    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .hero-description {
